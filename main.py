@@ -23,7 +23,7 @@ class Game():
         pygame.display.update()
 
     def draw(self):
-        self.screen.fill(WHITE)
+        self.screen.fill(BLACK)
 
 g = Game()
 while g.running:
