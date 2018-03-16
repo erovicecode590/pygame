@@ -29,6 +29,5 @@ g = Game()
 while g.running:
     g.run()
 
-pygame.quit(
+pygame.quit()
 sys.exit()
-)
