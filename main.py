@@ -7,7 +7,7 @@ class Game():
     def __init__(self):
         pygame.init()
         self.running = True
-        screen = pygame.display.set_mode(DISPLAY)
+        self.screen = pygame.display.set_mode(DISPLAY)
 
     def run(self):
         self.events()
@@ -20,10 +20,10 @@ class Game():
                 self.running = False
 
     def update(self):
-        pass
+        pygame.display.update()
 
     def draw(self):
-        pygame.screen.fill(BLACK)
+        self.screen.fill(WHITE)
 
 g = Game()
 while g.running:
