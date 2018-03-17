@@ -12,10 +12,10 @@
 import pygame as pg
 import sys
 
-# Import path to join files from other directories
+# Import path to join files from other directories.
 from os import path
 
-# Import everything from other py files in directory
+# Import everything from other py files in directory for use.
 from settings import *
 from sprites import *
 
@@ -57,9 +57,10 @@ class Game():
         # Redraw changes on to the screen.
         self.screen.fill(DARKGREY) # Background color
         self.all_sprites.draw(self.screen) # Draw all sprites within group on to screen.
-        pg.display.flip()
+        pg.display.flip() # Update everything on to the screen.
 
     def load_data(self):
+        # Load data from py files and other files.
         pass
 
     def show_start_screen(self):
@@ -67,8 +68,6 @@ class Game():
 
     def show_go_screen(self):
         pass
-
-        self.screen.fill(BLACK)
 
 # Call game object and methods to run script.
 g = Game()
