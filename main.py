@@ -62,6 +62,8 @@ class Game():
     def load_data(self):
         # Load data from py files and other files.
         pass
+        game_folder = path.dirname(__file__)
+        img_dir = path.join(game_folder,'images')
 
     def show_start_screen(self):
         pass
