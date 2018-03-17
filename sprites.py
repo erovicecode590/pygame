@@ -10,3 +10,7 @@ class Player(pg.sprite.Sprite):
         self.image = pg.Surface((30, 40))
         self.image.fill(BLACK)
         self.rect = self.image.get_rect()
+        self.rect.centerx = WIDTH/2
+
+    def update(self):
+        pass
