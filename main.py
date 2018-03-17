@@ -69,12 +69,13 @@ class Game():
     def show_go_screen(self):
         pass
 
-# Call game object and methods to run script.
-g = Game()
-g.show_start_screen()
-while g.running:
-    g.new_game()
-    g.run()
-    g.show_go_screen()
-pg.quit()
-sys.exit()
+if __name__ == '__main__':
+    # Call game object and methods to run script.
+    g = Game()
+    g.show_start_screen()
+    while g.running:
+        g.new_game()
+        g.run()
+        g.show_go_screen()
+    pg.quit()
+    sys.exit()
