@@ -35,7 +35,6 @@ class Game():
         self.all_sprites.update()
 
     def draw(self):
-<<<<<<< HEAD
         self.screen.fill(DARKGREY)
         self.all_sprites.draw(self.screen)
         pg.display.flip()
@@ -48,20 +47,14 @@ class Game():
 
     def show_go_screen(self):
         pass
-=======
+
         self.screen.fill(BLACK)
->>>>>>> bb6258e8bc901df9e2e20f1b268075a49e3e4503
 
 g = Game()
 g.show_start_screen()
 while g.running:
     g.new_game()
     g.run()
-<<<<<<< HEAD
     g.show_go_screen()
 pg.quit()
-=======
-
-pygame.quit()
->>>>>>> bb6258e8bc901df9e2e20f1b268075a49e3e4503
 sys.exit()
