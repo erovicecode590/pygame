@@ -14,12 +14,12 @@ class Game():
 
     def new_game(self):
         self.all_sprites = pg.sprite.Group()
-        self.player = Player()
-        self.all_sprites.add(self.player)
+        self.player = Player(self, 5, 5)
 
     def run(self):
         self.playing = True
         while self.playing:
+            self.dt = self.clock.tick(FPS)/1000
             self.events()
             self.update()
             self.draw()
