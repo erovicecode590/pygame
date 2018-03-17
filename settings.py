@@ -13,7 +13,7 @@ DISPLAY = (WIDTH, HEIGHT)
 FPS = 60 # Define frames per second.
 
 # Colors are defined with respect to RGB (Red, Green, Blue).
-                   R    G    B
+#                  R    G    B
 BLACK           = (0,   0,   0)
 WHITE           = (255, 255, 255)
 LIGHTGREY       = (150, 150, 150)
