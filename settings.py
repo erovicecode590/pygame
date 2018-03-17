@@ -7,3 +7,5 @@ DISPLAY = (WIDTH, HEIGHT)
 # Define Colors
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
+LIGHTGREY = (150, 150, 150)
+DARKGREY = (50, 50, 50)
