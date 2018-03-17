@@ -69,7 +69,7 @@ class Game():
     def show_go_screen(self):
         pass
 
-if __name__ == '__main__':
+def start_game():
     # Call game object and methods to run script.
     g = Game()
     g.show_start_screen()
@@ -79,3 +79,6 @@ if __name__ == '__main__':
         g.show_go_screen()
     pg.quit()
     sys.exit()
+
+if __name__ == '__main__':
+    start_game()
