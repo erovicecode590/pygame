@@ -26,6 +26,7 @@ class Game():
         self.clock = pg.time.Clock()
         self.running = True
         self.screen = pg.display.set_mode(DISPLAY)
+        self.load_data()
 
     def new_game(self):
         # Initialize setup of sprites when a new game is started.
@@ -61,9 +62,9 @@ class Game():
 
     def load_data(self):
         # Load data from py files and other files.
-        pass
         game_folder = path.dirname(__file__)
-        img_dir = path.join(game_folder,'images')
+        image_dir = path.join(game_folder,'images')
+        self.characters = Spritesheet(path.join(image_dir, CHARACTER_SPRITESHEET))
 
     def show_start_screen(self):
         pass
