@@ -12,6 +12,16 @@ from settings import *
 # Define 2D vector to use for sprite movement.
 vec = pg.math.Vector2
 
+class Spritesheet:
+    def __init__(self, filename):
+        self.spritesheet = pg.image.load(filename).convert_alpha()
+
+    def get_image(self, x, y, width, height):
+        image = pg.Surface((width, height))
+        image.set_colorkey(BLACK)
+        image.blit(self.spritesheet, (0,0), (x, y, width, height))
+        return image
+
 class Player(pg.sprite.Sprite):
     def __init__(self, game, x, y):
         # Define initial properties for sprite when created.
@@ -19,8 +29,7 @@ class Player(pg.sprite.Sprite):
         # Line necessary for sprite to be initialized in pygame.
         pg.sprite.Sprite.__init__(self, self.groups)
         self.game = game # Allows sprite to reference self in game object.
-        self.image = pg.Surface((30, 40))
-        self.image.fill(BLACK)
+        self.image = self.game.characters.get_image(164, 88, 49, 43)
         self.rect = self.image.get_rect() # Defines rect to manage sprite placement.
         self.pos = vec(x, y)*TILESIZE # Sprite placement based on location called to.
         self.vel = vec(0, 0)
