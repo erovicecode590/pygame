@@ -27,3 +27,6 @@ TILESIZE = 32
 
 # Player Properties.
 PLAYER_SPEED = 150
+
+#Spritesheets used
+CHARACTER_SPRITESHEET = "spritesheet_characters.png"
