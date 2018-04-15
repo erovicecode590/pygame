@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="sprites.png">
+    <SubTexture name="potion_full.png"	x="164"	y="88"	width="49"	height="43" frameX="-0" frameY="-0" frameWidth="49" frameHeight="43"/>
+</TextureAtlas>
