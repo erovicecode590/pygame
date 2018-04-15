@@ -9,9 +9,6 @@ import pygame as pg
 # Import properties from settings file.
 from settings import *
 
-# Define 2D vector to use for sprite movement.
-vec = pg.math.Vector2
-
 class Spritesheet:
     def __init__(self, filename):
         self.spritesheet = pg.image.load(filename).convert_alpha()
@@ -29,23 +26,23 @@ class Player(pg.sprite.Sprite):
         # Line necessary for sprite to be initialized in pygame.
         pg.sprite.Sprite.__init__(self, self.groups)
         self.game = game # Allows sprite to reference self in game object.
-        self.image = self.game.characters.get_image(164, 88, 49, 43)
+        self.image = self.game.characters.get_image(623, 1013, 194, 218)
         self.rect = self.image.get_rect() # Defines rect to manage sprite placement.
-        self.pos = vec(x, y)*TILESIZE # Sprite placement based on location called to.
-        self.vel = vec(0, 0)
+        self.pos = VEC(x, y)*TILESIZE # Sprite placement based on location called to.
+        self.vel = VEC(0, 0)
 
     def get_keys(self):
         # Method for obtaining keys pressed by player/user to move sprite.
-        self.vel = vec(0, 0)
+        self.vel = VEC(0, 0)
         keys = pg.key.get_pressed()
         if keys[pg.K_RIGHT]:
-            self.vel += vec(PLAYER_SPEED, 0)
+            self.vel += VEC(PLAYER_SPEED, 0)
         if keys[pg.K_LEFT]:
-            self.vel = vec(-PLAYER_SPEED, 0)
+            self.vel = VEC(-PLAYER_SPEED, 0)
         if keys[pg.K_UP]:
-            self.vel += vec(0, -PLAYER_SPEED)
+            self.vel += VEC(0, -PLAYER_SPEED)
         if keys[pg.K_DOWN]:
-            self.vel = vec(0, PLAYER_SPEED)
+            self.vel += VEC(0, PLAYER_SPEED)
 
     def update(self):
         # Method for updated changes/properties of sprite.
