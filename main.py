@@ -1,11 +1,11 @@
 #============================================================
-#title              :tile based game script
-#description        :template for a pygame script
-#author             :Alan Ramirez
-#date               :date
-#usage              :python main.py
-#notes              :
-#python_version     :3.6.2
+# title              :tile based game script
+# description        :template for a pygame script
+# author             :Alan Ramirez
+# date               :3/24/2018
+# usage              :python main.py
+# notes              :
+# python_version     :3.6.2
 #============================================================
 
 # Import pygame module needed to run script
