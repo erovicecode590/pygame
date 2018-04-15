@@ -12,6 +12,9 @@ DISPLAY = (WIDTH, HEIGHT)
 
 FPS = 60 # Define frames per second.
 
+# Define 2D vector for Sprite movement.
+VEC = pg.math.Vector2
+
 # Colors are defined with respect to RGB (Red, Green, Blue).
 #                  R    G    B
 BLACK           = (0,   0,   0)
@@ -29,4 +32,4 @@ TILESIZE = 32
 PLAYER_SPEED = 150
 
 #Spritesheets used
-CHARACTER_SPRITESHEET = "spritesheet_characters.png"
+CHARACTER_SPRITESHEET = "potion.png"
